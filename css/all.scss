@@ -1,0 +1,129 @@
+html {
+  height: 100%;
+  body {
+    font-family: "微軟正黑體";
+    height: 100%;
+    background: linear-gradient(#141e30, #243b55);
+    .form-signin {
+      width: 400px;
+      padding: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      h1 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+      }
+      .form-group {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          margin-bottom: 30px;
+          border: none;
+          border-bottom: 1px solid #fff;
+          outline: none;
+          background: transparent;
+          border-radius: 0;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          pointer-events: none;
+          transition: 0.5s;
+        }
+      }
+      .btn-login {
+        padding: 12px 24px;
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 100%);
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(1, 0.15, 0.34, 0.92);
+        & span {
+          display: inline-block;
+          transition: inherit;
+          color: hsl(0, 0%, 100%);
+        }
+        &:hover span {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        &::before {
+          content: "";
+          background-color: hsl(243, 22%, 84%);
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transform: translateY(100%);
+          transition: inherit;
+          width: 100%;
+          transition: transform 0.5s cubic-bezier(1, 0.15, 0.34, 0.92);
+        }
+        &::after {
+          content: "登入";
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transition: inherit;
+          transform: translateY(100%);
+          width: 100%;
+        }
+        &:hover::before {
+          transform: translateY(0) scale(3);
+          transition-delay: 0.025s;
+        }
+        &:hover::after {
+          opacity: 1;
+          color: hsl(0, 0%, 0%);
+          transform: translateY(0);
+        }
+      }
+    }
+    .customTable {
+      .customTable-thead {
+        tr {
+          th {
+            color: #fff;
+          }
+        }
+      }
+      .customTable-tbody {
+        tr {
+          color: #fff;
+          .btnEdit {
+              color: #fff;
+          }
+        //   .btnDelete {
+        //       color: red;
+        //   }
+        }
+
+      }
+    }
+    .customPagination {
+      .pagination {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
